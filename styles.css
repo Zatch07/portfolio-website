@@ -1,0 +1,172 @@
+/* Make scrollbar invisible for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Make scrollbar invisible for IE, Edge, and Firefox */
+  html,
+  body {
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
+  }
+  
+  body {
+    font-family: 'Tektur', sans-serif;
+    background-image: url('background.png'); /* Specify file and its type */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-attachment: fixed; reinstate to make it fixed */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .profile-image {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 800px; /* A4 width */
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+  }
+  
+  header {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .greeting {
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #87CEFA;
+    text-shadow: 2px 2px #1E90FF;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .greeting::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Move the start of the underline to the center */
+    transform: translateX(-50%); /* Shift the underline back by half its width to center it */
+    bottom: 0;
+    width: 75%;
+    border-bottom: 2px solid #a51010;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: #1E90FF;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 2.2em;
+    margin-top: 40px;
+  }
+  
+  h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+  
+  p,
+  h4,
+  li {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .project:first-of-type,
+  .skill:first-of-type,
+  .certificate:first-of-type,
+  .experience:first-of-type,
+  .hobby:first-of-type {
+    border-top: double 3px #333;
+  }
+  
+  .project,
+  .skill,
+  .certificate,
+  .experience,
+  .hobby {
+    border-bottom: 1px solid #333;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .project:last-of-type,
+  .skill:last-of-type,
+  .certificate:last-of-type,
+  .experience:last-of-type,
+  .hobby:last-of-type {
+    border-bottom: double 3px #333;
+  }
+  
+  footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    border-top: 1px solid #333;
+  }
+  
+  .social-links a {
+    color: #1E90FF;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  /* Hover effects */
+  
+  a:hover {
+    color: #87CEFA;
+  }
+  
+  h3:hover {
+    text-decoration: underline;
+  }
+  
+  .project:hover,
+  .skill:hover,
+  .certificate:hover,
+  .experience:hover,
+  .hobby:hover {
+    background-color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Download Resume */
+  
+  .resume-download {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .resume-download a {
+    display: inline-block;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  .resume-download a:hover {
+    background-color: black;
+    color: white;
+  }
