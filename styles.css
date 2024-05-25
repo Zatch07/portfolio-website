@@ -44,7 +44,8 @@ body {
   margin: 0 auto;
   max-width: 800px; /* A4 width */
   padding: 24px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: hsla(0 0% 0% / 0.5);
+  backdrop-filter: blur(0.8rem);
   box-sizing: border-box;
 }
 
