@@ -20,6 +20,9 @@ var cloudIds = [
   "cloud13",
   "cloud14",
   "cloud15",
+  "cloud16",
+  "cloud17",
+  "cloud18",
 ];
 var clouds = cloudIds
   .map((id) => document.getElementById(id))
@@ -28,7 +31,7 @@ var clouds = cloudIds
 // Function to set random initial positions for clouds without overlapping
 function setRandomPositions() {
   var positions = [];
-  clouds.forEach(function (cloud) {
+  clouds.forEach(function (cloud, index) {
     var randomTop, randomLeft, isOverlap;
     do {
       isOverlap = false;
@@ -49,6 +52,16 @@ function setRandomPositions() {
     positions.push({ top: randomTop, left: randomLeft });
     cloud.style.top = randomTop + "vh";
     cloud.style.left = randomLeft + "px";
+
+    // Set opacity based on cloud index
+    var maxOpacity = 1.0;
+    if (index < 6) {
+      cloud.style.opacity = maxOpacity / 4; // Clouds 1-6 at 1/3 of max opacity
+    } else if (index < 11) {
+      cloud.style.opacity = maxOpacity / 3; // Clouds 7-11 at 2/3 of max opacity
+    } else {
+      cloud.style.opacity = maxOpacity/2; // Clouds 12-15 at max opacity
+    }
   });
 }
 
@@ -65,15 +78,22 @@ setRandomPositions();
 // Store the initial left positions
 var initialLeftPositions = clouds.map((cloud) => parseFloat(cloud.style.left));
 
+// Define the maximum speed
+var maxSpeed = 0.3;
+
 // Add the event listener
 window.addEventListener(
   "scroll",
   function () {
     clouds.forEach((cloud, index) => {
-      var speed = [
-        0.05, 0.075, 0.1, 0.125, 0.15, 0.075, 0.15, 0.1, 0.15, 0.15, 0.125,
-        0.125, 0.25, 0.75, 0.1, 0.125,
-      ][index];
+      var speed;
+      if (index < 8) {
+        speed = maxSpeed / 3; // Clouds 1-8 at 1/3 of max speed
+      } else if (index < 13) {
+        speed = (maxSpeed * 2) / 3; // Clouds 8-13 at 2/3 of max speed
+      } else {
+        speed = maxSpeed; // Clouds 13-18 at max speed
+      }
       updateCloudPosition(cloud, speed, initialLeftPositions[index]);
     });
   },
