@@ -11,6 +11,11 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Not Change color when site already visited */
+a{color: #87cefa;}
+
+
+
 body {
   font-family: "Tektur", sans-serif;
   background-image: url("background.png"); /* Specify file and its type */
@@ -32,6 +37,8 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+
 
 .container {
   margin: 0 auto;
@@ -68,14 +75,17 @@ header {
   border-bottom: 2px solid #a51010;
 }
 
+
 h1,
 h2,
 h3 {
-  color: #1e90ff;
+  color: rgb(252, 0, 0);
   margin-bottom: 20px;
 }
 
 h1 {
+  color: rgb(252, 0, 0);
+
   font-size: 2.5em;
 }
 
@@ -87,6 +97,7 @@ h2 {
 h3 {
   font-size: 1.8em;
   margin-bottom: 15px;
+  color: #87cefa;
 }
 
 p,
@@ -487,6 +498,7 @@ h3:hover {
 }
 
 .primary-nav {
+  font-weight: bolder;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -515,11 +527,10 @@ h3:hover {
 
 /* Hover effect */
 .primary-nav a:hover {
-    color: #a51010;
+    color: #bd1212;
 }
 
 .primary-nav a > span {
-  font-weight: 700;
   margin-inline-end: 0.75rem;
 }
 
