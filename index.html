@@ -1,319 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    
     <title>Yashpal Parmar - Portfolio</title>
     
     <!-- Meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The portfolio of Yashpal Parmar, a Cloud Engineer.">
-    <meta name="keywords" content="Yashpal Parmar, Portfolio, Cloud Engineer, Projects">
-    <meta name="author" content="Yashpal Parmar">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="description"
+    content="The portfolio of Yashpal Parmar, a Cloud Engineer."
+    />
+    <meta
+    name="keywords"
+    content="Yashpal Parmar, Portfolio, Cloud Engineer, Projects"
+    />
+    <meta name="author" content="Yashpal Parmar" />
+    
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Tektur&display=swap"
+    rel="stylesheet"
+    />
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <!-- Cloud images -->
+    <img id="cloud1" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud2" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud3" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud4" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud5" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud6" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud7" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud8" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud9" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud10" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud11" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud12" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud13" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud14" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud15" class="cloud" src="./cloudwhite.png" alt="Cloud" />
 
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <!-- Image here -->
-            <img src="profile.jpg" alt="Yashpal Parmar" class="profile-image"> 
-            <h1 class="greeting">Hey, I'm Yashpal Parmar</h1>
-            <p>I'm a cloud enthusiast who found his groove in the historic city of Gwalior, MP, after kicking off life's journey in Jodhpur, Rajasthan. The drive to make a substantial and meaningful change has always been part of who I am, but who knew it'd be in the infinite canvas of the cloud? Love crafting awesome stuff up there and making the virtual skies more interesting.<br><br>
-            
-            And guess what? I'm just getting started. On this exciting quest of becoming a high-flying Cloud Engineer, and trust me, the learning never stops. So, here's to building, learning, and adding a sprinkle of coolness in the cloud realm. Ride along!</p>
-            
-            <!-- Download Resume -->
-            <div class="resume-download">
-                <a href="https://drive.google.com/file/d/1rIhiLz7SmmqSuOaom3WChy0pTC0halBl/view?usp=sharing" download>
-                    <span class="bordered-text">Download Resume</span>
-                </a>
-            </div>
-        </header>
+    <!-- Scroll to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            
-            <!-- AWS EC2 Backup and Restore Automation -->
-            <div class="project box">
-                <h3>AWS EC2 Backup and Restore Automation</h3>
-                <ul>
-                    <li>Engineered AWS EC2 backup automation every 7 days with Lambda and Python; scheduled via CloudWatch.</li>
-                    <li>Stored backups securely in S3 Bucket, managed access with IAM. Utilized AWS CLI for resource management.</li>
-                    <li>Optimized quick recovery with custom scripts, ensuring backup takes place when system is not in Reboot state.</li>
-                </ul>
-            </div>
-            
-            <!-- AWS LEX Chatbot with ChatGPT -->
-            <div class="project box">
-                <h3>AWS LEX Chatbot with ChatGPT</h3>
-                <ul>
-                    <li>Integrated Amazon Lex with ChatGPT for an e-commerce Chatbot, enhancing customer interaction.</li>
-                    <li>Utilized AWS Lambda for backend processing with Python for scripting and OpenAI API for AI responses.</li>
-                    <li>Delivered Personalized Support through Advanced AI, improving service quality and user experience with human-like responses with ChatGPT API, minimising the need for service employees.</li>
-                </ul>
-            </div>
-            
-            <!-- Cloud VPN -->
-            <div class="project box">
-                <h3>Cloud VPN</h3>
-                <ul>
-                    <li>Engineered a secure cloud-based VPN infrastructure by leveraging Google Cloud’s VM instances, Networking Tools, and Outline, ensuring Encrypted Connections between the Cloud Environment and on-premises networks.</li>
-                    <li>Bolstered a similar Multi-Region VPN setup using AWS and OpenVPN, enabling secure connections between cloud and on-premises networks while optimizing VM performance and resource utilization.</li>
-                </ul>
-            </div>
-            
-            <!-- AWS Quicksight Visualization -->
-            <div class="project box">
-                <h3>AWS Quicksight Visualization</h3>
-                <ul>
-                    <li>Developed visualizations for a dataset of 50000 Amazon best-selling products using Amazon QuickSight.</li>
-                    <li>Leveraged Amazon S3 for storage, employed a manifest.json file for management and QuickSight integration.</li>
-                    <li>Utilized Amazon QuickSight’s interactive sheets for creating dynamic visualizations including bar charts, pie charts, and line graphs to derive actionable insights.</li>
-                </ul>
-            </div>
-            
-            <!-- Application of Reinforcement Learning in Gaming -->
-            <div class="project box">
-                <h3>Application of Reinforcement Learning in Gaming</h3>
-                <ul>
-                    <li>Developed and trained a machine learning agent to proficiently play a Starship game, leveraging Unity's ML-Agent Toolkit, demonstrating advanced skills in reinforcement learning.</li>
-                    <li>Designed a point-based reward system for the agent that incentivized survival duration and enemy defeat, creating a more engaging and challenging gaming experience.</li>
-                    <li>Achieved consistent, long-duration gameplay from the machine learning agent upon project completion, demonstrating the effectiveness of the training process and algorithms.</li>
-                </ul>
-            </div>
+    <!-- Navbar -->
+    <div class="primary-header">
+      <div>
+        <img class="logo" src="./logo.png" alt="yashhh" />
+      </div>
 
-            <!-- Development of Corporate Communication System -->
-            <div class="project box">
-                <h3>Development of Corporate Communication System</h3>
-                <ul>
-                    <li>Spearheaded the design and implementation of a web-based Corporate Communication system facilitating efficient hosting and joining of meetings within the organization, emphasizing user-friendly interaction.</li>
-                    <li>Engineered a feature allowing individual members to create rooms, host personal chats, and meetings, enhancing collaboration and communication.</li>
-                    <li>Secured all chat interactions through a peer-to-peer based service, ensuring confidentiality and integrity of communication.</li>
-                </ul>
-            </div>
-        </section>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
 
-        <section id="skills">
-            <h2>Skills</h2>
-
-            <!-- Skill 1 -->
-            <div class="skill box">
-                <h3>Programming Languages</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>SQL</li>
-                    <li>C</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-            </div>
-
-            <!-- Skill 2 -->
-            <div class="skill box">
-                <h3>Domain Knowledge</h3>
-                <ul>
-                    <li>Cloud Development (AWS and GCP)</li>
-                    <li>Data Structures & Algorithms</li>
-                    <li>Graphic Designing</li>
-                </ul>
-            </div>
-
-            <!-- Skill 3 -->
-            <div class="skill box">
-                <h3>Databases</h3>
-                <ul>
-                    <li>Amazon RDS</li>
-                    <li>MySQL</li>
-                    <li>Firestore</li>
-                    <li>Google Cloud Storage</li>
-                </ul>
-            </div>
-
-            <!-- Skill 4 -->
-            <div class="skill box">
-                <h3>Tools/Platforms</h3>
-                <ul>
-                    <li>Linux</li>
-                    <li>AWS</li>
-                    <li>Google Cloud Platoform</li>
-                    <li>VS Code</li>
-                    <li>Autodesk Maya</li>
-                    <li>GitHub</li>
-                    <li>Unreal Engine</li>
-                </ul>
-            </div>
-
-            <!-- Skill 5 -->
-            <div class="skill box">
-                <h3>Additional Skills</h3>
-                <ul>
-                    <li>Virtual Private Cloud</li>
-                    <li>Kubernetes (K8)</li>
-                    <li>BigQuery</li>
-                    <li>Docker</li>
-                </ul>
-            </div>
-
-        </section>
-
-        <section id="certificates">
-            <h2>Certificates</h2>
-
-            <div class="certificate box">
-                <h3><a href="https://drive.google.com/file/d/1MC7jnUzARUif1HhBoju2HmXC2MQ4u_2h/view">Biz InfoTecno Intern</a></h3>
-                <ul>
-                    <li>Biz InfoTecno pvt ltd</li>
-                </ul>
-            </div>
-            
-            <div class="certificate box">
-                <h3><a href="https://drive.google.com/file/d/1NRobVNfd1Kq3EiYcpHGOGdkmuZxIgyrX/view">GeeksforGeeks</a></h3>
-                <ul>
-                    <li>Cloud Bootcamp</li>
-                </ul>
-            </div>
-
-            <div class="certificate box">
-                <h3><a href="https://drive.google.com/file/d/1scewaj2MDfQWXduTqKgAymhBt-uEb8TL/view">Skill Nation</a></h3>
-                <ul>
-                    <li>ChatGPT and AI Tools</li>
-                </ul>
-            </div>
-            
-            <div class="certificate box">
-                <h3><a href="https://www.cloudskillsboost.google/public_profiles/e2871bc2-5ccf-4a00-904f-e8a29616a2d6">Google Cloud</a></h3>
-                <ul>
-                    <li>Cloud Skillboost profile [Silver League][6 Certs])</li>
-                </ul>
-            </div>
-            
-            <!-- Add more certificates as needed -->
-        
-        </section>
-
-        <section id="experience">
-            <h2>Experience</h2>
-            
-            <!-- Experience 1 -->
-            <div class="experience box">
-                <h3>Associate Cloud Computing Engineer: Biz InfoTecno</h3>
-                <ul>
-                    <li>Designed and deployed Webflow CMS-based websites on Amazon Web Services (AWS) infrastructure including EC2, S3, Route 53, CloudFront, and Certificate Manager.</li>
-                    <li>Managed AWS architecture and services including VPC configuration, IAM access controls, security groups, CloudWatch monitoring, and CLI automation.</li>
-                    <li>Optimized the site with HTTPS encryption, global CDN caching, and AWS Global Accelerator.</li>
-                </ul>
-            </div>
-            
-            <!-- Experience 2 -->
-            <div class="experience box">
-                <h3>Software Developer: LBEF Group of Institutions, Nepal</h3>
-                <ul>
-                    <li>Upgraded LBEF Group of Institutions’ database to MySQL in a scalable Cloud environment, leveraging cloud-based solutions and utilizing Python to seamlessly transfer data from Excel. Improving access, reliability, and security.</li>
-                    <li>Collaborated with a friend to develop a user-friendly front-end interface for the cloud-hosted database for ease of use.</li>
-                    <li>Successfully implemented complex cloud-based Database migration and front-end development within the project timeline in a cloud-centric environment, ensuring seamless integration with existing systems.</li>
-                </ul>
-            </div>
-
-            <!-- Experience 3 -->
-            <div class="experience box">
-                <h3>Student Executive: IIIT Sports Fest</h3>
-                <ul>
-                    <li>Organized a successful Sports Fest as a student representative, showcasing strong leadership and management skills.</li>
-                    <li>• Utilized SQL for efficient Data Management, keeping track of information, including teams, players, and volunteers.</li>
-                    <li>Overhauled the college’s sports grounds by implementing advanced equipment and lighting, enhancing the overall
-                        experience for participants.</li>
-                </ul>
-            </div>
-
-
-            <!-- Experience 4 -->
-            <div class="experience box">
-                <h3>Student Executive: IIIT Cultural Fest</h3>
-                <ul>
-                    <li>Executed a successful Campus Ambassador Program that attracted over 500 student participants, demonstrating effective marketing and outreach strategies.</li>
-                    <li>Played a central role in event setup and promotion, fostering a vibrant and inclusive festival atmosphere that encouraged widespread participation.</li>
-                    <li>Served as a liaison for out-of-town attendees, facilitating their engagement with the festival and providing visitor support and guidance.</li>
-                </ul>
-            </div>
-
-            <!-- Experience 3 -->
-            <div class="experience box">
-                <h3>Leadership Role: House Captain, School Activities</h3>
-                <ul>
-                    <li>Chaired a myriad of academic, cultural, and sporting events, demonstrating strong leadership and organizational skills.</li>
-                    <li>Successfully led the team to achieve the highest ranking in the House system during my tenure.</li>
-                    <li>Instrumental in securing victories in 50% of the House-based games during the annual sports fest, showcasing a commitment to team success and a competitive spirit.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="hobbies">
-            <h2>Hobbies</h2>
-            
-            <!-- Hobby 1 -->
-            <div class="hobby box">
-                <h3>Sports</h3>
-                <ul>
-                    <li>Football, Table Tennis, etc.</li>
-                </ul>
-            </div>
-            
-            <!-- Hobby 2 -->
-            <div class="hobby box">
-                <h3>Music</h3>
-                <ul>
-                    <li>Pop, EDM, etc.</li>
-                </ul>
-            </div>
-            
-            <!-- Hobby 3 -->
-            <div class="hobby box">
-                <h3>Gaming</h3>
-                <ul>
-                    <li>Call of Duty, Rocket League, etc.</li>
-                </ul>
-            </div>
-
-            <!-- Hobby 4 -->
-            <div class="hobby box">
-                <h3>TV Shows</h3>
-                <ul>
-                    <li>The Office, Breaking Bad, etc.</li>
-                </ul>
-            </div>
-
-            <!-- Hobby 5 -->
-            <div class="hobby box">
-                <h3>Cubing</h3>
-                <ul>
-                    <li>3x3, 4x4, 5x5, etc.</li>
-                </ul>
-            </div>
-        </section>
-
-        <footer>
-            <p>© Yashpal Parmar 2023. Hosted on AWS.</p>
-            <div class="social-links">
-                <a href="https://github.com/Zatch07">GitHub</a>
-                <a href="https://twitter.com/Z_Yashh">Twitter</a>
-                <a href="https://www.instagram.com/z.yashh/">Instagram</a>
-                <a href="https://www.linkedin.com/in/yashpal-parmar/">LinkedIn</a>
-                <a href="mailto:yash.parmar2908@gmail.com">Gmail</a>
-                <a href="tel:8696455275">Phone</a>
-            </div>
-        </footer>
+      <nav>
+        <ul data-visible="false" id="primary-nav" class="primary-nav flex">
+          <li class="active">
+            <a href="#projects"> <span aria-hidden="true"></span>Projects </a>
+          </li>
+          <li class="active">
+            <a href="#skills"> <span aria-hidden="true"></span>Skills </a>
+          </li>
+          <li class="active">
+            <a href="#certificates">
+              <span aria-hidden="true"></span>Certificates
+            </a>
+          </li>
+          <li class="active">
+            <a href="#experience">
+              <span aria-hidden="true"></span>Experience
+            </a>
+          </li>
+          <li class="active">
+            <a href="#hobbies"> <span aria-hidden="true"></span>Hobbies </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var links = document.getElementsByTagName('a');
-            for (var i = 0; i < links.length; i++) {
-                links[i].target = "_blank";
-            }
-        });
-    </script>
-</body>
+
+    <!-- Container -->
+    <div class="container">
+      <header>
+        <!-- Image here -->
+        <img src="profile.jpg" alt="Yashpal Parmar" class="profile-image" />
+        <h1 class="greeting">Hey, I'm Yashpal Parmar</h1>
+        <p>
+          I'm a cloud enthusiast who found his groove in the historic city of
+          Gwalior, MP, after kicking off life's journey in Jodhpur, Rajasthan.
+          The drive to make a substantial and meaningful change has always been
+          part of who I am, but who knew it'd be in the infinite canvas of the
+          cloud? Love crafting awesome stuff up there and making the virtual
+          skies more interesting.<br /><br />
+
+          And guess what? I'm just getting started. On this exciting quest of
+          becoming a high-flying Cloud Engineer, and trust me, the learning
+          never stops. So, here's to building, learning, and adding a sprinkle
+          of coolness in the cloud realm. Ride along!
+        </p>
+
+        <!-- Download Resume -->
+        <div class="resume-download">
+          <a
+            href="https://drive.google.com/file/d/1rIhiLz7SmmqSuOaom3WChy0pTC0halBl/view?usp=sharing"
+            download
+          >
+            <span class="bordered-text">Download Resume</span>
+          </a>
+        </div>
+      </header>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <!-- AWS EC2 Backup and Restore Automation -->
+        <div class="project box">
+          <h3>AWS EC2 Backup and Restore Automation</h3>
+          <ul>
+            <li>
+              Engineered AWS EC2 backup automation every 7 days with Lambda and
+              Python; scheduled via CloudWatch.
+            </li>
+            <li>
+              Stored backups securely in S3 Bucket, managed access with IAM.
+              Utilized AWS CLI for resource management.
+            </li>
+            <li>
+              Optimized quick recovery with custom scripts, ensuring backup
+              takes place when system is not in Reboot state.
+            </li>
+          </ul>
+        </div>
+
+        <!-- AWS LEX Chatbot with ChatGPT -->
+        <div class="project box">
+          <h3>AWS LEX Chatbot with ChatGPT</h3>
+          <ul>
+            <li>
+              Integrated Amazon Lex with ChatGPT for an e-commerce Chatbot,
+              enhancing customer interaction.
+            </li>
+            <li>
+              Utilized AWS Lambda for backend processing with Python for
+              scripting and OpenAI API for AI responses.
+            </li>
+            <li>
+              Delivered Personalized Support through Advanced AI, improving
+              service quality and user experience with human-like responses with
+              ChatGPT API, minimising the need for service employees.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cloud VPN -->
+        <div class="project box">
+          <h3>Cloud VPN</h3>
+          <ul>
+            <li>
+              Engineered a secure cloud-based VPN infrastructure by leveraging
+              Google Cloud’s VM instances, Networking Tools, and Outline,
+              ensuring Encrypted Connections between the Cloud Environment and
+              on-premises networks.
+            </li>
+            <li>
+              Bolstered a similar Multi-Region VPN setup using AWS and OpenVPN,
+              enabling secure connections between cloud and on-premises networks
+              while optimizing VM performance and resource utilization.
+            </li>
+          </ul>
+        </div>
+
+        <!-- AWS Quicksight Visualization -->
+        <div class="project box">
+          <h3>AWS Quicksight Visualization</h3>
+          <ul>
+            <li>
+              Developed visualizations for a dataset of 50000 Amazon
+              best-selling products using Amazon QuickSight.
+            </li>
+            <li>
+              Leveraged Amazon S3 for storage, employed a manifest.json file for
+              management and QuickSight integration.
+            </li>
+            <li>
+              Utilized Amazon QuickSight’s interactive sheets for creating
+              dynamic visualizations including bar charts, pie charts, and line
+              graphs to derive actionable insights.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Application of Reinforcement Learning in Gaming -->
+        <div class="project box">
+          <h3>Application of Reinforcement Learning in Gaming</h3>
+          <ul>
+            <li>
+              Developed and trained a machine learning agent to proficiently
+              play a Starship game, leveraging Unity's ML-Agent Toolkit,
+              demonstrating advanced skills in reinforcement learning.
+            </li>
+            <li>
+              Designed a point-based reward system for the agent that
+              incentivized survival duration and enemy defeat, creating a more
+              engaging and challenging gaming experience.
+            </li>
+            <li>
+              Achieved consistent, long-duration gameplay from the machine
+              learning agent upon project completion, demonstrating the
+              effectiveness of the training process and algorithms.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Development of Corporate Communication System -->
+        <div class="project box">
+          <h3>Development of Corporate Communication System</h3>
+          <ul>
+            <li>
+              Spearheaded the design and implementation of a web-based Corporate
+              Communication system facilitating efficient hosting and joining of
+              meetings within the organization, emphasizing user-friendly
+              interaction.
+            </li>
+            <li>
+              Engineered a feature allowing individual members to create rooms,
+              host personal chats, and meetings, enhancing collaboration and
+              communication.
+            </li>
+            <li>
+              Secured all chat interactions through a peer-to-peer based
+              service, ensuring confidentiality and integrity of communication.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+
+        <!-- Skill 1 -->
+        <div class="skill box">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>C++</li>
+            <li>SQL</li>
+            <li>C</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="skill box">
+          <h3>Domain Knowledge</h3>
+          <ul>
+            <li>Cloud Development (AWS and GCP)</li>
+            <li>Data Structures & Algorithms</li>
+            <li>Graphic Designing</li>
+          </ul>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="skill box">
+          <h3>Databases</h3>
+          <ul>
+            <li>Amazon RDS</li>
+            <li>MySQL</li>
+            <li>Firestore</li>
+            <li>Google Cloud Storage</li>
+          </ul>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="skill box">
+          <h3>Tools/Platforms</h3>
+          <ul>
+            <li>Linux</li>
+            <li>AWS</li>
+            <li>Google Cloud Platoform</li>
+            <li>VS Code</li>
+            <li>Autodesk Maya</li>
+            <li>GitHub</li>
+            <li>Unreal Engine</li>
+          </ul>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="skill box">
+          <h3>Additional Skills</h3>
+          <ul>
+            <li>Virtual Private Cloud</li>
+            <li>Kubernetes (K8)</li>
+            <li>BigQuery</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="certificates">
+        <h2>Certificates</h2>
+
+        <div class="certificate box">
+          <h3>
+            <a
+              href="https://drive.google.com/file/d/1MC7jnUzARUif1HhBoju2HmXC2MQ4u_2h/view"
+              >Biz InfoTecno Intern</a
+            >
+          </h3>
+          <ul>
+            <li>Biz InfoTecno pvt ltd</li>
+          </ul>
+        </div>
+
+        <div class="certificate box">
+          <h3>
+            <a
+              href="https://drive.google.com/file/d/1NRobVNfd1Kq3EiYcpHGOGdkmuZxIgyrX/view"
+              >GeeksforGeeks</a
+            >
+          </h3>
+          <ul>
+            <li>Cloud Bootcamp</li>
+          </ul>
+        </div>
+
+        <div class="certificate box">
+          <h3>
+            <a
+              href="https://drive.google.com/file/d/1scewaj2MDfQWXduTqKgAymhBt-uEb8TL/view"
+              >Skill Nation</a
+            >
+          </h3>
+          <ul>
+            <li>ChatGPT and AI Tools</li>
+          </ul>
+        </div>
+
+        <div class="certificate box">
+          <h3>
+            <a
+              href="https://www.cloudskillsboost.google/public_profiles/e2871bc2-5ccf-4a00-904f-e8a29616a2d6"
+              >Google Cloud</a
+            >
+          </h3>
+          <ul>
+            <li>Cloud Skillboost profile [Silver League][6 Certs])</li>
+          </ul>
+        </div>
+
+        <!-- Add more certificates as needed -->
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <!-- Experience 1 -->
+        <div class="experience box">
+          <h3>Associate Cloud Computing Engineer: Biz InfoTecno</h3>
+          <ul>
+            <li>
+              Designed and deployed Webflow CMS-based websites on Amazon Web
+              Services (AWS) infrastructure including EC2, S3, Route 53,
+              CloudFront, and Certificate Manager.
+            </li>
+            <li>
+              Managed AWS architecture and services including VPC configuration,
+              IAM access controls, security groups, CloudWatch monitoring, and
+              CLI automation.
+            </li>
+            <li>
+              Optimized the site with HTTPS encryption, global CDN caching, and
+              AWS Global Accelerator.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="experience box">
+          <h3>Software Developer: LBEF Group of Institutions, Nepal</h3>
+          <ul>
+            <li>
+              Upgraded LBEF Group of Institutions’ database to MySQL in a
+              scalable Cloud environment, leveraging cloud-based solutions and
+              utilizing Python to seamlessly transfer data from Excel. Improving
+              access, reliability, and security.
+            </li>
+            <li>
+              Collaborated with a friend to develop a user-friendly front-end
+              interface for the cloud-hosted database for ease of use.
+            </li>
+            <li>
+              Successfully implemented complex cloud-based Database migration
+              and front-end development within the project timeline in a
+              cloud-centric environment, ensuring seamless integration with
+              existing systems.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="experience box">
+          <h3>Student Executive: IIIT Sports Fest</h3>
+          <ul>
+            <li>
+              Organized a successful Sports Fest as a student representative,
+              showcasing strong leadership and management skills.
+            </li>
+            <li>
+              • Utilized SQL for efficient Data Management, keeping track of
+              information, including teams, players, and volunteers.
+            </li>
+            <li>
+              Overhauled the college’s sports grounds by implementing advanced
+              equipment and lighting, enhancing the overall experience for
+              participants.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="experience box">
+          <h3>Student Executive: IIIT Cultural Fest</h3>
+          <ul>
+            <li>
+              Executed a successful Campus Ambassador Program that attracted
+              over 500 student participants, demonstrating effective marketing
+              and outreach strategies.
+            </li>
+            <li>
+              Played a central role in event setup and promotion, fostering a
+              vibrant and inclusive festival atmosphere that encouraged
+              widespread participation.
+            </li>
+            <li>
+              Served as a liaison for out-of-town attendees, facilitating their
+              engagement with the festival and providing visitor support and
+              guidance.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="experience box">
+          <h3>Leadership Role: House Captain, School Activities</h3>
+          <ul>
+            <li>
+              Chaired a myriad of academic, cultural, and sporting events,
+              demonstrating strong leadership and organizational skills.
+            </li>
+            <li>
+              Successfully led the team to achieve the highest ranking in the
+              House system during my tenure.
+            </li>
+            <li>
+              Instrumental in securing victories in 50% of the House-based games
+              during the annual sports fest, showcasing a commitment to team
+              success and a competitive spirit.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="hobbies">
+        <h2>Hobbies</h2>
+
+        <!-- Hobby 1 -->
+        <div class="hobby box">
+          <h3>Sports</h3>
+          <ul>
+            <li>Football, Table Tennis, etc.</li>
+          </ul>
+        </div>
+
+        <!-- Hobby 2 -->
+        <div class="hobby box">
+          <h3>Music</h3>
+          <ul>
+            <li>Pop, EDM, etc.</li>
+          </ul>
+        </div>
+
+        <!-- Hobby 3 -->
+        <div class="hobby box">
+          <h3>Gaming</h3>
+          <ul>
+            <li>Call of Duty, Rocket League, etc.</li>
+          </ul>
+        </div>
+
+        <!-- Hobby 4 -->
+        <div class="hobby box">
+          <h3>TV Shows</h3>
+          <ul>
+            <li>The Office, Breaking Bad, etc.</li>
+          </ul>
+        </div>
+
+        <!-- Hobby 5 -->
+        <div class="hobby box">
+          <h3>Cubing</h3>
+          <ul>
+            <li>3x3, 4x4, 5x5, etc.</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <p>© Yashpal Parmar 2023. Hosted on AWS.</p>
+        <div class="social-links">
+          <a href="https://github.com/Zatch07" target="_blank">GitHub</a>
+          <a href="https://twitter.com/Z_Yashh" target="_blank">Twitter</a>
+          <a href="https://www.instagram.com/z.yashh/" target="_blank"
+            >Instagram</a
+          >
+          <a href="https://www.linkedin.com/in/yashpal-parmar/" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:yash.parmar2908@gmail.com" target="_blank">Gmail</a>
+          <a href="tel:8696455275">Phone</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
