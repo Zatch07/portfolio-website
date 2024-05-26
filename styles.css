@@ -60,7 +60,7 @@ a{color: #87cefa;}
 
 body {
   font-family: "Tektur", sans-serif;
-  background-image: url("background.png"); /* Specify file and its type */
+  background-image: url("background.ng"); /* Specify file and its type */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -545,8 +545,8 @@ h3:hover {
   list-style: none;
   padding: 0;
   margin: 0;
-  background: hsla(0 0% 0% / 0.5);
-  backdrop-filter: blur(1.5rem);
+  background: rgba(0, 255, 255, 0.349);
+  backdrop-filter: blur(1rem);
 }
 
 .primary-nav li {
