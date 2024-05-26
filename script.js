@@ -3,6 +3,51 @@ window.addEventListener("load", function () {
   window.scrollTo(0, 0);
 });
 
+
+// Stars
+// Change this value to adjust the number of stars
+const numberOfStars = 100;
+
+// Function to create a star
+function createStar() {
+    const star = document.createElement('div');
+    star.innerText = '★';
+    star.className = 'star';
+    document.querySelector('.starry-background').appendChild(star);
+    positionStar(star);
+    animateStar(star);
+}
+
+// Function to randomly position a star
+function positionStar(star) {
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    star.style.left = `${x}px`;
+    star.style.top = `${y}px`;
+}
+
+// Function to animate a star
+function animateStar(star) {
+  const duration = Math.random() * 5 + 3; // Change this range for different speeds
+  const delay = Math.random() * 5; // Randomize delay
+  const size = Math.random() * 10 + 5; // Randomize size between 5px and 15px
+  star.style.fontSize = `${size}px`;
+  star.style.animationDuration = `${duration}s`;
+  star.style.animationDelay = `${delay}s`;
+  star.style.animationTimingFunction = 'ease-in-out';
+  setInterval(() => {
+      positionStar(star);
+  }, duration * 1000); // Move the star at the end of its duration
+}
+
+// Create the stars
+for (let i = 0; i < numberOfStars; i++) {
+  createStar();
+}
+
+
+
+
 // Find the clouds
 var cloudIds = [
   "cloud1",
