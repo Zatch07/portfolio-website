@@ -149,8 +149,30 @@ window.addEventListener(
 const primaryNav = document.querySelector(".primary-nav");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 
+// Scroll events
+const handleScroll = () => {
+  if (window.innerWidth >= 1377) {
+    if (window.scrollY > 0) {
+      primaryNav.classList.add('slid-out');
+      setTimeout(() => {
+        primaryNav.classList.add('visible');
+      }, 2); 
+    } else {
+      primaryNav.classList.remove('visible');
+      setTimeout(() => {
+        primaryNav.classList.remove('slid-out');
+      }, 200); 
+    }
+  }
+};
+
+// Event listener for scroll events
+window.addEventListener('scroll', handleScroll);
+
+
 navToggle.addEventListener("click", () => {
   const visibility = primaryNav.getAttribute("data-visible");
+
   if (visibility === "false") {
     primaryNav.setAttribute("data-visible", true);
     navToggle.setAttribute("aria-expanded", true);
@@ -159,6 +181,17 @@ navToggle.addEventListener("click", () => {
     navToggle.setAttribute("aria-expanded", false);
   }
 });
+
+// Add event listener to each nav item to close the nav on click
+const navItems = document.querySelectorAll(".primary-nav a");
+navItems.forEach(item => {
+  item.addEventListener("click", () => {
+    primaryNav.setAttribute("data-visible", false);
+    navToggle.setAttribute("aria-expanded", false);
+  });
+});
+
+
 
 // Scroll to Top Button Script
 let mybutton = document.getElementById("myBtn");
