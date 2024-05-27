@@ -35,7 +35,7 @@ body {
 
 .star {
   position: absolute;
-  color: #0ff; /* Neon color */
+  color: rgb(158, 226, 235); /* Neon color */
   font-size: 10px;
   opacity: 0.7;
   animation: rotateStar 5s linear infinite;
@@ -545,7 +545,7 @@ h3:hover {
   list-style: none;
   padding: 0;
   margin: 0;
-  background: rgba(0, 255, 255, 0.349);
+  background: rgba(255, 255, 255, 0.096);
   backdrop-filter: blur(1rem);
   transition: right 0.3s ease;
   
