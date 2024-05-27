@@ -547,16 +547,20 @@ h3:hover {
   margin: 0;
   background: rgba(0, 255, 255, 0.349);
   backdrop-filter: blur(1rem);
+  transition: right 0.3s ease;
+  
 }
 
 .primary-nav li {
   margin: 0;
+  padding-bottom: 10px;
 }
 
 @supports (backdrop-filter: blur(1rem)) {
   .primary-nav {
     background: hsl(0 0% 100/0.1);
     backdrop-filter: blur(1rem);
+   
   }
 }
 
@@ -566,6 +570,30 @@ h3:hover {
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
+.navicon{
+  position: relative;
+  top: 8px;
+  height: 30px;
+  width: 30px;
+}
+
+/* Sliding navbar */
+.primary-nav.slid-out {
+  position: fixed;
+  right: -250px;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  transform: translateX(0);
+  transition: right 0.3s ease;
+  flex-direction: column;
+  padding: 6rem;
+  background: rgb(69 67 67 / 33%);
+}
+
+.primary-nav.slid-out.visible {
+  right: 0;
+}
 
 
 /* Hover effect */
@@ -577,16 +605,17 @@ h3:hover {
   margin-inline-end: 0.75rem;
 }
 
-@media (max-width: 35rem) {
+@media (max-width: 859px) {
   .profile-image {
     width: 300px;
   }
 
   .primary-nav {
+    font-size: 17px;
     --gap: 2rem;
     position: fixed;
     z-index: 1000;
-    inset: 0 0 0 30%;
+    inset: 0 0 0 50%;
 
     flex-direction: column;
     padding: min(30vh, 10rem) 2rem;
@@ -622,7 +651,7 @@ h3:hover {
   }
 }
 
-@media (min-width: 35em) and (max-width: 44.999em) {
+@media (min-width: 859px) and (max-width: 44.999em) {
   .primary-nav a > span {
     display: none;
   }
@@ -632,11 +661,15 @@ h3:hover {
   }
 }
 
-@media (min-width: 35rem) {
+@media (min-width: 859px) {
   .primary-nav {
-    --gap: clamp(2rem, 5vw, 3.5rem);
+    --gap: clamp(2rem, 5vw, 1.5rem);
     padding-block: 1rem;
-    padding-inline: clamp(3rem, 10vw, 10rem);
+    padding-inline: clamp(0.5rem, 10vw, 5rem);
+  }
+
+  .primary-nav.slid-out {
+    padding-inline: 1rem;
   }
 }
 
