@@ -1,0 +1,63 @@
+/* Style for clouds */
+.cloud {
+    position: fixed;
+    height: auto;
+    z-index: -1;
+    opacity: 0.3;
+  }
+  
+  #cloud1 {
+    width: 90px;
+  }
+  
+  #cloud2 {
+    width: 100px;
+  }
+  #cloud3 {
+    width: 90px;
+  }
+  #cloud4 {
+    width: 90px;
+  }
+  #cloud5 {
+    width: 100px;
+  }
+  #cloud6 {
+    width: 100px;
+  }
+  #cloud7 {
+    width: 100px;
+  }
+  #cloud8 {
+    width: 90px;
+  }
+  #cloud9 {
+    width: 150px;
+  }
+  #cloud10 {
+    width: 150px;
+  }
+  #cloud11 {
+    width: 150px;
+  }
+  #cloud12 {
+    width: 145px;
+  }
+  #cloud13 {
+    width: 155px;
+  }
+  #cloud14 {
+    width: 175px;
+  }
+  #cloud15 {
+    width: 180px;
+  }
+  #cloud16 {
+    width: 175px;
+  }
+  #cloud17 {
+    width: 180px;
+  }
+  #cloud18 {
+    width: 175px;
+  }

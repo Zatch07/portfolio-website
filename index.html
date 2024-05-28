@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>Yashpal Parmar - Portfolio</title>
-
     <!-- Meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,8 +14,12 @@
       content="Yashpal Parmar, Portfolio, Cloud Engineer, Projects"
     />
     <meta name="author" content="Yashpal Parmar" />
-
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/star.css" />
+    <link rel="stylesheet" type="text/css" href="./css/downloadbtn.css" />
+    <link rel="stylesheet" type="text/css" href="./css/scrolltotopbtn.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/clouds.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,31 +33,31 @@
     <div class="starry-background"></div>
 
     <!-- Cloud images -->
-    <img id="cloud1" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud2" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud3" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud4" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud5" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud6" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud7" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud8" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud9" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud10" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud11" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud12" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud13" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud14" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud15" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud16" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud17" class="cloud" src="./cloudwhite.png" alt="Cloud" />
-    <img id="cloud18" class="cloud" src="./cloudwhite.png" alt="Cloud" />
+    <img id="cloud1" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud2" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud3" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud4" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud5" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud6" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud7" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud8" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud9" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud10" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud11" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud12" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud13" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud14" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud15" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud16" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud17" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
+    <img id="cloud18" class="cloud" src="./images/cloudwhite.png" alt="Cloud" />
 
     <!-- Scroll to top button -->
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <!-- Navbar -->
     <div class="primary-header">
       <div>
-        <img class="logo" src="./logo.png" alt="yashhh" />
+        <img class="logo" src="./images/logo.png" alt="yashhh" />
       </div>
 
       <button
@@ -69,62 +72,58 @@
         <ul data-visible="false" id="primary-nav" class="primary-nav flex">
           <li class="active">
             <a href="#projects">
-              <span aria-hidden="true"
-                ><img
-                  class="navicon"
-                  src="./icons/projects.png"
-                  alt="projects" /></span
-              >Projects
+              <img class="navicon" src="./icons/projects.png" alt="projects" />
+              <span>Projects</span> 
             </a>
           </li>
           <li class="active">
             <a href="#skills">
-              <span aria-hidden="true"
-                ><img
-                  class="navicon"
-                  src="./icons/skill.png"
-                  alt="projects" /></span
-              >Skills
+              <img
+                class="navicon"
+                src="./icons/skill.png"
+                alt="projects"
+              />
+              <span>Skills</span>
             </a>
           </li>
           <li class="active">
             <a href="#certificates">
-              <span aria-hidden="true"
-                ><img
-                  class="navicon"
-                  src="./icons/certificate.png"
-                  alt="projects" /></span
-              >Certificates
+              <img
+                class="navicon"
+                src="./icons/certificate.png"
+                alt="projects"
+              />
+              <span>Certificates</span>
             </a>
           </li>
           <li class="active">
             <a href="#experience">
-              <span aria-hidden="true"
-                ><img
-                  class="navicon"
-                  src="./icons/experience.png"
-                  alt="projects" /></span
-              >Experience
+              <img
+                class="navicon"
+                src="./icons/experience.png"
+                alt="projects"
+              />
+              <span>Experience</span>
             </a>
           </li>
           <li class="active">
             <a href="#hobbies">
-              <span aria-hidden="true"
-                ><img
-                  class="navicon"
-                  src="./icons/hobby.png"
-                  alt="projects" /></span
-              >Hobbies
+              <img
+                class="navicon"
+                src="./icons/hobby.png"
+                alt="projects"
+              />
+              <span>Hobbies</span>
             </a>
           </li>
           <li class="active">
             <a href="#Contact">
-              <span aria-hidden="true"
-                ><img
-                  class="navicon"
-                  src="./icons/contact.png"
-                  alt="projects" /></span
-              >Contact
+              <img
+                class="navicon"
+                src="./icons/contact.png"
+                alt="projects"
+              />
+              <span>Contact</span>
             </a>
           </li>
         </ul>
@@ -135,7 +134,11 @@
     <div class="container">
       <header>
         <!-- Image here -->
-        <img src="profile.jpg" alt="Yashpal Parmar" class="profile-image" />
+        <img
+          src="./images/profile.jpg"
+          alt="Yashpal Parmar"
+          class="profile-image"
+        />
         <h1 class="greeting">Hey, I'm Yashpal Parmar</h1>
         <p>
           I'm a cloud enthusiast who found his groove in the historic city of
