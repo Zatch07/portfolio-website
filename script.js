@@ -48,6 +48,16 @@ for (let i = 0; i < numberOfStars; i++) {
 
 
 
+
+
+
+
+
+
+
+
+
+
 // Find the clouds
 var cloudIds = [
   "cloud1",
@@ -145,30 +155,43 @@ window.addEventListener(
   false
 );
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Navbar Script
 const primaryNav = document.querySelector(".primary-nav");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 
-// Scroll events
+// Scroll eventsm
 const handleScroll = () => {
-  if (window.innerWidth >= 1377) {
+  if (window.innerWidth >= 1432) { // Adjusted to the same breakpoint as CSS
     if (window.scrollY > 0) {
       primaryNav.classList.add('slid-out');
-      setTimeout(() => {
-        primaryNav.classList.add('visible');
-      }, 2); 
+      primaryNav.classList.add('visible');
     } else {
       primaryNav.classList.remove('visible');
-      setTimeout(() => {
-        primaryNav.classList.remove('slid-out');
-      }, 200); 
+      primaryNav.classList.remove('slid-out');
     }
   }
 };
 
 // Event listener for scroll events
 window.addEventListener('scroll', handleScroll);
-
 
 navToggle.addEventListener("click", () => {
   const visibility = primaryNav.getAttribute("data-visible");
@@ -190,6 +213,22 @@ navItems.forEach(item => {
     navToggle.setAttribute("aria-expanded", false);
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
