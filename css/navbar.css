@@ -1,4 +1,4 @@
-/* navbar */
+/* Navbar */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -56,7 +56,12 @@
 .primary-nav a {
   text-decoration: none;
   color: #fff;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  transition: background-color 0.0s, color 0.3s, transform 0.3s;
+}
+
+.primary-nav span{
+  position: relative;
+  bottom: 3px;
 }
 
 .primary-nav a:hover {
@@ -68,28 +73,63 @@
   top: 8px;
   height: 30px;
   width: 30px;
+  margin-right: 10px;
 }
 
 /* Sliding navbar */
 .primary-nav.slid-out {
   position: fixed;
-  left: -250px;
+  left: 0;
   top: 0;
   height: 100%;
-  width: 300px;
+  width: 60px; /* Adjusted width to only show icons */
   transform: translateX(0);
-  transition: left 0.3s ease;
+  transition: transform 0.3s ease;
   flex-direction: column;
-  padding: 6rem;
+  padding: 9rem 0;
   background: rgb(69 67 67 / 33%);
 }
 
 .primary-nav.slid-out.visible {
-  left: 0;
+  background: none;
+  backdrop-filter: none;
 }
 
+.primary-nav.slid-out a{
+  width: 250px;
+  display: flex;
+  position: relative;
+  gap: 27px;
+  flex-direction: row-reverse;
+  left: -200px;
+  transition: 0.2s;
+}
+
+.primary-nav.slid-out a img{
+  height: 40px;
+  width: 40px;
+}
+
+.primary-nav.slid-out a span {
+  position: relative;
+  padding-left: 10px;
+  top: 16px;
+}
+
+.primary-nav.slid-out :hover a{
+  color: rgb(241, 241, 241);
+  font-size: 20px;
+  left: -10px;
+  background: hsl(0 0% 100/0.1);
+  backdrop-filter: blur(1rem);
+  padding-bottom: 18px;
+}
+
+
+
+
 /* Media queries */
-@media (max-width: 1127px) {
+@media (max-width: 1207px) {
   .profile-image {
     width: 300px;
   }
@@ -144,13 +184,7 @@
   }
 }
 
-/* @media (min-width: 859px) and (max-width: 1125px) {
-  .container {
-    background-color: #bd1212;
-  }
-} */
-
-@media (min-width: 1127px) {
+@media (min-width: 1207px) {
   .primary-nav {
     --gap: clamp(1rem, 5vw, 2.5rem);
     padding-block: 1rem;
