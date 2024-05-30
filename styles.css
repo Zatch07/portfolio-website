@@ -29,6 +29,7 @@ body {
 }
 
 .profile-image {
+  width: 100%;
   width: 400px;
   height: auto;
   display: block;
@@ -82,7 +83,6 @@ h3 {
 
 h1 {
   color: rgb(252, 0, 0);
-
   font-size: 2.5em;
 }
 
@@ -104,13 +104,6 @@ li {
   margin-bottom: 10px;
 }
 
-.project:first-of-type,
-.skill:first-of-type,
-.certificate:first-of-type,
-.experience:first-of-type,
-.hobby:first-of-type {
-  border-top: double 3px #333;
-}
 
 .project,
 .skill,
@@ -120,14 +113,6 @@ li {
   border-bottom: 1px solid #333;
   padding: 20px;
   margin: 20px 0;
-}
-
-.project:last-of-type,
-.skill:last-of-type,
-.certificate:last-of-type,
-.experience:last-of-type,
-.hobby:last-of-type {
-  border-bottom: double 3px #333;
 }
 
 footer {
@@ -160,4 +145,30 @@ h3:hover {
 .hobby:hover {
   background-color: #333;
   transition: background-color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .profile-image {
+    width: 100%;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .greeting {
+    font-size: 2em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
 }
