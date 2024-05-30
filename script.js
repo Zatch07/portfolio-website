@@ -1,8 +1,9 @@
+// script.js
+
 // Force the page to scroll to the top on load
 window.addEventListener("load", function () {
   window.scrollTo(0, 0);
 });
-
 
 // Stars
 // Change this value to adjust the number of stars
@@ -10,20 +11,20 @@ const numberOfStars = 100;
 
 // Function to create a star
 function createStar() {
-    const star = document.createElement('div');
-    star.innerText = '★';
-    star.className = 'star';
-    document.querySelector('.starry-background').appendChild(star);
-    positionStar(star);
-    animateStar(star);
+  const star = document.createElement('div');
+  star.innerText = '★';
+  star.className = 'star';
+  document.querySelector('.starry-background').appendChild(star);
+  positionStar(star);
+  animateStar(star);
 }
 
 // Function to randomly position a star
 function positionStar(star) {
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
-    star.style.left = `${x}px`;
-    star.style.top = `${y}px`;
+  const x = Math.random() * window.innerWidth;
+  const y = Math.random() * window.innerHeight;
+  star.style.left = `${x}px`;
+  star.style.top = `${y}px`;
 }
 
 // Function to animate a star
@@ -36,7 +37,7 @@ function animateStar(star) {
   star.style.animationDelay = `${delay}s`;
   star.style.animationTimingFunction = 'ease-in-out';
   setInterval(() => {
-      positionStar(star);
+    positionStar(star);
   }, duration * 1000); // Move the star at the end of its duration
 }
 
@@ -45,43 +46,13 @@ for (let i = 0; i < numberOfStars; i++) {
   createStar();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Find the clouds
 var cloudIds = [
-  "cloud1",
-  "cloud2",
-  "cloud3",
-  "cloud4",
-  "cloud5",
-  "cloud6",
-  "cloud7",
-  "cloud8",
-  "cloud9",
-  "cloud10",
-  "cloud11",
-  "cloud12",
-  "cloud13",
-  "cloud14",
-  "cloud15",
-  "cloud16",
-  "cloud17",
-  "cloud18",
+  "cloud1", "cloud2", "cloud3", "cloud4", "cloud5", "cloud6", "cloud7",
+  "cloud8", "cloud9", "cloud10", "cloud11", "cloud12", "cloud13",
+  "cloud14", "cloud15", "cloud16", "cloud17", "cloud18"
 ];
-var clouds = cloudIds
-  .map((id) => document.getElementById(id))
-  .filter((cloud) => cloud !== null);
+var clouds = cloudIds.map((id) => document.getElementById(id)).filter((cloud) => cloud !== null);
 
 // Function to set random initial positions for clouds without overlapping
 function setRandomPositions() {
@@ -94,10 +65,7 @@ function setRandomPositions() {
       randomLeft = Math.random() * window.innerWidth; // Random left position within the viewport width
       // Check for overlap with existing positions
       for (var pos of positions) {
-        if (
-          Math.abs(randomTop - pos.top) < 15 &&
-          Math.abs(randomLeft - pos.left) < 150
-        ) {
+        if (Math.abs(randomTop - pos.top) < 15 && Math.abs(randomLeft - pos.left) < 150) {
           // Adjust overlap distance as needed
           isOverlap = true;
           break;
@@ -107,15 +75,14 @@ function setRandomPositions() {
     positions.push({ top: randomTop, left: randomLeft });
     cloud.style.top = randomTop + "vh";
     cloud.style.left = randomLeft + "px";
-
     // Set opacity based on cloud index
     var maxOpacity = 1.0;
     if (index < 6) {
-      cloud.style.opacity = maxOpacity / 4; // Clouds 1-6 at 1/3 of max opacity
+      cloud.style.opacity = maxOpacity / 4; // Clouds 1-6 at 1/4 of max opacity
     } else if (index < 11) {
-      cloud.style.opacity = maxOpacity / 3; // Clouds 7-11 at 2/3 of max opacity
+      cloud.style.opacity = maxOpacity / 3; // Clouds 7-11 at 1/3 of max opacity
     } else {
-      cloud.style.opacity = maxOpacity/2; // Clouds 12-15 at max opacity
+      cloud.style.opacity = maxOpacity / 2; // Clouds 12-15 at 1/2 of max opacity
     }
   });
 }
@@ -128,18 +95,17 @@ function updateCloudPosition(cloud, speed, baseLeft) {
 }
 
 // Set random initial positions for clouds
-setRandomPositions();
+if (window.innerWidth > 600) { // Only execute if screen width is greater than 600px
+  setRandomPositions();
 
-// Store the initial left positions
-var initialLeftPositions = clouds.map((cloud) => parseFloat(cloud.style.left));
+  // Store the initial left positions
+  var initialLeftPositions = clouds.map((cloud) => parseFloat(cloud.style.left));
 
-// Define the maximum speed
-var maxSpeed = 0.3;
+  // Define the maximum speed
+  var maxSpeed = 0.3;
 
-// Add the event listener
-window.addEventListener(
-  "scroll",
-  function () {
+  // Add the event listener
+  window.addEventListener("scroll", function () {
     clouds.forEach((cloud, index) => {
       var speed;
       if (index < 8) {
@@ -151,33 +117,14 @@ window.addEventListener(
       }
       updateCloudPosition(cloud, speed, initialLeftPositions[index]);
     });
-  },
-  false
-);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }, false);
+}
 
 // Navbar Script
 const primaryNav = document.querySelector(".primary-nav");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 
-// Scroll eventsm
+// Scroll events
 const handleScroll = () => {
   if (window.innerWidth >= 1432) { // Adjusted to the same breakpoint as CSS
     if (window.scrollY > 0) {
@@ -214,24 +161,6 @@ navItems.forEach(item => {
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Scroll to Top Button Script
 let mybutton = document.getElementById("myBtn");
 window.onscroll = function () {
@@ -245,6 +174,7 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
+
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
