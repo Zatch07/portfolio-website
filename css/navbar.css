@@ -127,6 +127,11 @@
 
 /* Media queries */
 @media (max-width: 1207px) {
+  .container{
+    background: hsl(0deg 0% 0% / 48%);
+    backdrop-filter: blur(0.1em);
+  }
+
   .profile-image {
     width: 300px;
   }

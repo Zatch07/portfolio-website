@@ -104,13 +104,6 @@ li {
   margin-bottom: 10px;
 }
 
-/* .project:first-of-type,
-.skill:first-of-type,
-.certificate:first-of-type,
-.experience:first-of-type,
-.hobby:first-of-type {
-  border-top: double 3px #333;
-} */
 
 .project,
 .skill,
@@ -121,14 +114,6 @@ li {
   padding: 20px;
   margin: 20px 0;
 }
-
-/* .project:last-of-type,
-.skill:last-of-type,
-.certificate:last-of-type,
-.experience:last-of-type,
-.hobby:last-of-type {
-  border-bottom: double 3px #333;
-} */
 
 footer {
   background-color: #000000;
