@@ -1,0 +1,11 @@
+{
+  "name": "yashpal-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node serve.mjs",
+    "build": "mkdir -p dist && cp -r index.html styles.css script.js README.md dist/",
+    "build:dev": "mkdir -p dist && cp -r index.html styles.css script.js README.md dist/",
+    "start": "node serve.mjs"
+  }
+}
