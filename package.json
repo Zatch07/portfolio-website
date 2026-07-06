@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "node serve.mjs",
-    "build": "mkdir -p dist && cp -r index.html styles.css script.js README.md dist/",
-    "build:dev": "mkdir -p dist && cp -r index.html styles.css script.js README.md dist/",
+    "build": "mkdir -p dist && cp -r index.html styles.css script.js README.md favicon.ico images CNAME dist/ || true",
+    "build:dev": "mkdir -p dist && cp -r index.html styles.css script.js README.md favicon.ico images CNAME dist/ || true",
     "start": "node serve.mjs"
   }
 }
