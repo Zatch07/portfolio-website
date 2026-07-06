@@ -310,24 +310,17 @@ function onScroll(){
 window.addEventListener('scroll', onScroll, { passive:true });
 onScroll();
 
-// ---------- Cursor glow + dot ----------
-const glow = document.getElementById('cursorGlow');
+// ---------- Lightweight Cursor ----------
 const dot = document.getElementById('cursorDot');
-let gx=0,gy=0,tx=0,ty=0;
-window.addEventListener('mousemove',(e)=>{
-  tx = e.clientX; ty = e.clientY;
-  dot.style.transform = `translate(${tx}px, ${ty}px) translate(-50%,-50%)`;
-});
-function raf(){
-  gx += (tx-gx)*0.08; gy += (ty-gy)*0.08;
-  glow.style.transform = `translate(${gx}px, ${gy}px) translate(-50%,-50%)`;
-  requestAnimationFrame(raf);
+if (dot) {
+  window.addEventListener('mousemove', (e) => {
+    dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%,-50%)`;
+  });
+  document.querySelectorAll('a, button, .project, .hobby, .skill, .tl-card').forEach(node => {
+    node.addEventListener('mouseenter', () => dot.classList.add('grow'));
+    node.addEventListener('mouseleave', () => dot.classList.remove('grow'));
+  });
 }
-raf();
-document.querySelectorAll('a, button, .project, .hobby, .skill, .tl-card').forEach(node=>{
-  node.addEventListener('mouseenter',()=>dot.classList.add('grow'));
-  node.addEventListener('mouseleave',()=>dot.classList.remove('grow'));
-});
 
 // ---------- Terminal typing ----------
 const termLines = [
