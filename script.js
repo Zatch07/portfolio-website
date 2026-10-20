@@ -63,53 +63,95 @@
 
 
 // ---------- Data ----------
-const projects = [
-  { title:"AWS CI-CD Pipeline", tag:"Automation",
-    url:"https://github.com/Zatch07/Web-Deployment-CI-CD-Pipeline-using-AWS-and-Github",
-    points:[
-      "Configured and automated CI/CD pipeline using AWS CodeBuild, CodeDeploy and CodePipeline.",
-      "Deployed application on Nginx on EC2 with proper IAM roles and permissions.",
-      "Integrated GitHub Actions in AWS CodePipeline for automated build & deploy on every push."],
-    tech:["CodePipeline","EC2","IAM","GitHub Actions"] },
-  { title:"EC2 Backup & Restore Automation", tag:"Serverless",
-    url:"https://github.com/Zatch07/Backing-and-Restoring-AWS-EC2-instances-with-Automated-Script",
-    points:[
-      "Engineered EC2 backup automation every 7 days with Lambda + Python, scheduled via CloudWatch.",
-      "Stored backups securely in S3 with IAM-managed access. Managed resources with AWS CLI.",
-      "Optimized quick recovery with custom scripts, ensuring backups skip reboot states."],
-    tech:["Lambda","Python","S3","CloudWatch"] },
-  { title:"AWS Lex Chatbot with ChatGPT", tag:"AI Integration",
-    url:"https://github.com/Zatch07/AWS-LEX-chatbot-with-chatgpt",
-    points:[
-      "Integrated Amazon Lex with ChatGPT for an e-commerce chatbot, enhancing customer interaction.",
-      "AWS Lambda backend in Python, wired to the OpenAI API for human-like responses.",
-      "Personalized support minimising the need for service employees."],
-    tech:["Lex","Lambda","OpenAI","Python"] },
-  { title:"Cloud VPN (Multi-Region)", tag:"Networking",
-    points:[
+const featuredProjects = [
+  {
+    title: "AWS CI-CD Pipeline for WebApp",
+    tag: "CI/CD & Automation",
+    url: "https://github.com/Zatch07/Web-Deployment-CI-CD-Pipeline-using-AWS-and-Github",
+    points: [
+      "Automated CI/CD pipeline using AWS CodeBuild, CodeDeploy, CodeDeploy Agent and CodePipeline.",
+      "Deployed the web application on a Nginx server hosted on EC2 with proper configuration and permissions using, the CodeDeploy Agent and an appspec.yml configuration file, and IAM roles for each service.",
+      "Integrated GitHub Actions in AWS CodePipeline for automated building and deployment after every push."
+    ],
+    tech: ["AWS", "EC2", "CloudDeploy", "CloudPipeline", "CloudBuild", "S3", "Artifact", "IAM roles", "GitHub Actions", "Nginx"]
+  },
+  {
+    title: "AWS EKS GitOps Pipeline",
+    tag: "GitOps & K8s",
+    url: "https://github.com/Zatch07",
+    points: [
+      "Provisioned a multi-AZ VPC and AWS EKS cluster with IAM OIDC roles using modular Terraform scripts.",
+      "Hardened a multi-stage Docker container running as non-root; Trivy scans, and ECR rollout via GitHub Actions.",
+      "Configured HPA and Nginx Ingress for automated scaling, deploying Prometheus and Grafana for real-time pod and cluster metrics."
+    ],
+    tech: ["AWS EKS", "Terraform", "Docker", "K8s", "GitHub Actions", "Prometheus", "Grafana", "Trivy", "ECR", "HPA"]
+  },
+  {
+    title: "AWS EC2 Backup and Restore Automation",
+    tag: "Cloud Automation",
+    url: "https://github.com/Zatch07/Backing-and-Restoring-AWS-EC2-instances-with-Automated-Script",
+    points: [
+      "Engineered AWS EC2 backup automation every 7 days with Lambda and Python; scheduled via CloudWatch.",
+      "Stored backups securely in S3 Bucket, managed access with IAM. Utilized AWS CLI for resource management.",
+      "Optimized quick recovery with custom scripts, ensuring backup takes place when system is not in Reboot state."
+    ],
+    tech: ["AWS", "EC2", "Lambda", "CloudWatch", "S3", "Python Scripts", "CLI", "IAM"]
+  },
+  {
+    title: "AWS LEX Chatbot with ChatGPT",
+    tag: "AI & Serverless",
+    url: "https://github.com/Zatch07/AWS-LEX-chatbot-with-chatgpt",
+    points: [
+      "Integrated Amazon Lex with ChatGPT for an e-commerce Chatbot, enhancing customer interaction.",
+      "Utilized AWS Lambda for backend processing, with Python for scripting and OpenAI API for AI responses.",
+      "Delivered Personalized Support through Advanced AI, improving service quality and user experience with human like responses with ChatGPT API and minimising the need for service employees."
+    ],
+    tech: ["AWS", "LEX", "Lambda", "ChatGPT", "API Gateway", "Serverless Architecture", "Python", "OpenAI API"]
+  }
+];
+
+const archivedProjects = [
+  {
+    title: "Cloud VPN (Multi-Region)",
+    tag: "Networking",
+    points: [
       "Secure cloud-based VPN using GCP VM instances, networking tools and Outline.",
       "Multi-region setup on AWS with OpenVPN for cloud ↔ on-prem connectivity.",
-      "Optimized VM performance and resource utilization across regions."],
-    tech:["GCP","AWS","OpenVPN","Outline"] },
-  { title:"AWS QuickSight Visualization", tag:"Analytics",
-    url:"https://github.com/Zatch07/AWS-Quicksight-visualization",
-    points:[
+      "Optimized VM performance and resource utilization across regions."
+    ],
+    tech: ["GCP", "AWS", "OpenVPN", "Outline"]
+  },
+  {
+    title: "AWS QuickSight Visualization",
+    tag: "Analytics",
+    url: "https://github.com/Zatch07/AWS-Quicksight-visualization",
+    points: [
       "Visualizations for 50,000 Amazon best-selling products using Amazon QuickSight.",
       "S3 for storage, manifest.json for management and QuickSight integration.",
-      "Interactive bar, pie and line charts to derive actionable insights."],
-    tech:["QuickSight","S3","Analytics"] },
-  { title:"Reinforcement Learning in Gaming", tag:"ML",
-    points:[
+      "Interactive bar, pie and line charts to derive actionable insights."
+    ],
+    tech: ["QuickSight", "S3", "Analytics"]
+  },
+  {
+    title: "Reinforcement Learning in Gaming",
+    tag: "Machine Learning",
+    points: [
       "Trained an ML agent to play a Starship game using Unity's ML-Agent Toolkit.",
       "Designed a point-based reward system incentivising survival and defeats.",
-      "Consistent, long-duration gameplay proving the training pipeline works."],
-    tech:["Unity","ML-Agents","RL"] },
-  { title:"Corporate Communication System", tag:"Full-stack",
-    points:[
+      "Consistent, long-duration gameplay proving the training pipeline works."
+    ],
+    tech: ["Unity", "ML-Agents", "RL"]
+  },
+  {
+    title: "Corporate Communication System",
+    tag: "Full-stack",
+    points: [
       "Web-based corporate communication system for hosting/joining meetings inside an org.",
       "Room creation, personal chats, and hosted meetings for tight collaboration.",
-      "Peer-to-peer service for confidentiality and integrity of communication."],
-    tech:["WebRTC","P2P","Web"] },
+      "Peer-to-peer service for confidentiality and integrity of communication."
+    ],
+    tech: ["WebRTC", "P2P", "Web"]
+  }
 ];
 
 const ICONS = {
@@ -126,44 +168,97 @@ const ICONS = {
   gamepad:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/><rect x="2" y="6" width="20" height="12" rx="4"/></svg>',
   tv:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M7 3l5 4 5-4"/></svg>',
   server:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6h.01M7 17h.01"/></svg>',
+  gradCap:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;display:inline-block;vertical-align:-1px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+  external:'<svg viewBox="0 0 24 24" class="ico-sm" style="display:inline-block;vertical-align:-2px;width:14px;height:14px"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg>',
 };
 
 const skillGroups = [
-  { icon:"code", title:"Programming", items:["Python","SQL","C","C++","HTML","CSS"] },
-  { icon:"cloud", title:"Domain Knowledge", items:["Cloud Dev (AWS & GCP)","Data Structures & Algorithms","Graphic Designing"] },
-  { icon:"db", title:"Databases", items:["Amazon RDS","MySQL","Firestore","Google Cloud Storage","S3","Artifacts","MongoDB Atlas"] },
-  { icon:"wrench", title:"Tools / Platforms", items:["Linux","AWS","Google Cloud Platform","VS Code","Autodesk Maya","GitHub","Unreal Engine"] },
-  { icon:"boxes", title:"Additional", items:["VPC","Kubernetes (K8s)","Docker","BigQuery","CodeBuild","CodeDeploy"] },
-  { icon:"award", title:"Certificates", items:["Google Cloud Skillboost — Silver League (6 certs)","GeeksforGeeks — Cloud Bootcamp","Skill Nation — ChatGPT & AI Tools"] },
+  {
+    icon: "code",
+    title: "Languages",
+    items: ["Python", "Bash", "SQL", "C", "C++", "HTML", "CSS"]
+  },
+  {
+    icon: "db",
+    title: "Databases",
+    items: ["MySQL", "Google Cloud Storage", "S3", "Artifacts", "MongoDB Atlas"]
+  },
+  {
+    icon: "wrench",
+    title: "Tools & Platforms",
+    items: ["Linux", "AWS", "GCP", "EKS", "VSCode", "Git", "GitHub", "VirtualBox"]
+  },
+  {
+    icon: "cloud",
+    title: "Domain Knowledge",
+    items: ["Cloud Development (AWS and GCP)", "Data Structures & Algorithms"]
+  },
+  {
+    icon: "boxes",
+    title: "Additional Skills",
+    items: ["VPC", "Docker", "Kubernetes", "Terraform", "Jenkins", "BigQuery", "Prometheus", "Grafana"]
+  },
+  {
+    icon: "award",
+    title: "Certificates",
+    isCerts: true,
+    certs: [
+      {
+        name: "AWS & GCP certificates / Badges (Multiple)",
+        issuer: "Credly Profile",
+        date: "Dec’21 - Jan’24",
+        url: "https://www.credly.com"
+      },
+      {
+        name: "Cloud Bootcamp",
+        issuer: "Geeks For Geeks certificate",
+        date: "Aug’23 - Oct’23"
+      },
+      {
+        name: "AI Tools",
+        issuer: "Skill Nation Certificate",
+        date: "Aug’23 - Sep’23"
+      }
+    ]
+  }
 ];
 
 const experience = [
-  { role:"DevOps Engineer", org:"BlackApps AI, Ahmedabad",
-    points:[
-      "Secured MongoDB Atlas by implementing VPC endpoints to restrict internet access and enhance data security.",
+  {
+    role: "DevOps Engineer",
+    org: "BlackApps AI",
+    type: "Full-time",
+    location: "Remote",
+    period: "Jul’24 - Current",
+    points: [
+      "Assisted securing MongoDB Atlas by implementing VPC endpoints to restrict public internet access, enhance data security and improve data latency.",
       "Evaluated NAT Gateways and VPC peering options to identify the most suitable solution for our architecture needs.",
-      "Assessed the need for a Non-Default VPC and chose an efficient configuration by modifying the Default VPC."] },
-  { role:"Software Developer", org:"LBEF Group of Institutions, Nepal",
-    points:[
-      "Upgraded LBEF's database to MySQL in a scalable cloud environment; used Python to migrate from Excel — better access, reliability and security.",
-      "Collaborated on a user-friendly front-end for the cloud-hosted database.",
-      "Delivered complex cloud DB migration + front-end within the project timeline."] },
-  { role:"Student Executive", org:"IIIT Sports Fest, Gwalior",
-    points:[
-      "Organized a successful Sports Fest as a student representative.",
-      "Used SQL for efficient data management — teams, players, volunteers.",
-      "Overhauled sports grounds with advanced equipment and lighting."] },
-  { role:"Student Executive", org:"IIIT Cultural Fest",
-    points:[
-      "Executed a Campus Ambassador Program attracting 500+ student participants.",
-      "Central role in event setup and promotion; drove vibrant, inclusive atmosphere.",
-      "Liaison for out-of-town attendees — engagement and visitor support."] },
-  { role:"House Captain", org:"School Activities",
-    points:[
-      "Chaired academic, cultural and sporting events — strong leadership and organization.",
-      "Led the team to the highest ranking in the House system during my tenure.",
-      "Won 50% of House-based games in the annual sports fest."] },
+      "Assessed the need for a Non-Default VPC and chose an efficient configuration by modifying the Default VPC."
+    ]
+  },
+  {
+    role: "Software Developer",
+    org: "LBEF Group of Institutions",
+    type: "Freelance",
+    location: "Remote",
+    period: "Jun’21 - Sep’21",
+    points: [
+      "Upgraded the database by reading data using pandas and importing it to MySQL using pymysql in Python.",
+      "Collaborated with a friend to connect the MySQL Server to the site and setup actions for general queries using ORM.",
+      "Hosted the website on EC2 as an Nginx server with necessary ports on EC2 public IP, providing reliable web hosting."
+    ]
+  }
 ];
+
+const education = {
+  institution: "Indian Institute of Information Technology, Gwalior",
+  shortName: "IIIT Gwalior",
+  degree: "Bachelors of Technology in Computer Science",
+  location: "Madhya Pradesh, India",
+  description: "Specialized in Core Computer Science, Distributed Systems, Cloud Computing, and Data Structures & Algorithms. Built deep foundations in computer systems, networking, and software engineering.",
+  tags: ["Computer Science", "Cloud Architecture", "Distributed Systems", "Data Structures & Algorithms", "Networking"]
+};
 
 const hobbies = [
   { icon:"trophy", title:"Sports", items:"Football, Table Tennis, etc." },
@@ -176,76 +271,157 @@ const hobbies = [
 // ---------- Render ----------
 const el = (t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
 
-// Projects
-const pg = document.getElementById('projectsGrid');
-projects.forEach((p,i)=>{
-  const li = p.points.map(pt=>`<li>${pt}</li>`).join('');
-  const tech = p.tech.map(t=>`<span>${t}</span>`).join('');
-  const card = el('article','project glass-card reveal-up',`
+// Projects builder
+function createProjectCard(p, i, prefix = "0") {
+  const li = p.points.map(pt => `<li>${pt}</li>`).join('');
+  const tech = p.tech.map(t => `<span>${t}</span>`).join('');
+  const num = prefix + (i + 1);
+  const card = el('article', 'project glass-card reveal-up', `
     <div class="p-head">
       <span class="p-tag">${p.tag}</span>
-      <span class="p-num">0${i+1}</span>
+      <span class="p-num">${num}</span>
     </div>
-    <h3>${p.url ? `<a href="${p.url}" target="_blank" rel="noopener" class="p-link">${p.title} <svg viewBox="0 0 24 24" class="ico-sm" style="display:inline-block;vertical-align:-2px;width:14px;height:14px"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 17L17 7M9 7h8v8"/></svg></a>` : p.title}</h3>
+    <h3>${p.url ? `<a href="${p.url}" target="_blank" rel="noopener" class="p-link">${p.title} ${ICONS.external}</a>` : p.title}</h3>
     <ul>${li}</ul>
     <div class="tech">${tech}</div>
   `);
-  card.style.transitionDelay = (i*0.05)+'s';
-  card.addEventListener('mousemove',(e)=>{
+  card.style.transitionDelay = (i * 0.06) + 's';
+  card.addEventListener('mousemove', (e) => {
     const r = card.getBoundingClientRect();
-    card.style.setProperty('--mx',(e.clientX-r.left)+'px');
-    card.style.setProperty('--my',(e.clientY-r.top)+'px');
+    card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    card.style.setProperty('--my', (e.clientY - r.top) + 'px');
   });
-  pg.appendChild(card);
-});
+  return card;
+}
+
+// Render Featured Projects
+const pg = document.getElementById('projectsGrid');
+if (pg) {
+  featuredProjects.forEach((p, i) => {
+    pg.appendChild(createProjectCard(p, i, "0"));
+  });
+}
+
+// Render Archive Projects
+const ag = document.getElementById('archiveGrid');
+if (ag) {
+  archivedProjects.forEach((p, i) => {
+    ag.appendChild(createProjectCard(p, i, "A0"));
+  });
+}
+
+// Archive toggle button
+const archiveToggle = document.getElementById('archiveToggle');
+if (archiveToggle && ag) {
+  archiveToggle.addEventListener('click', () => {
+    const isOpen = ag.classList.toggle('open');
+    archiveToggle.classList.toggle('open', isOpen);
+    archiveToggle.setAttribute('aria-expanded', isOpen);
+    const span = archiveToggle.querySelector('span');
+    if (span) {
+      span.textContent = isOpen ? 'Hide Archive Projects' : `View Archive / Additional Projects (${archivedProjects.length})`;
+    }
+    // trigger reveal observer on newly shown cards
+    ag.querySelectorAll('.reveal-up').forEach(c => c.classList.add('in'));
+  });
+}
 
 // Skills
 const sg = document.getElementById('skillsGrid');
-skillGroups.forEach((g,i)=>{
-  const items = g.items.map(it=>`<span>${it}</span>`).join('');
-  const card = el('div','skill glass-card reveal-up',`
-    <div class="skill-head">
-      <span class="skill-icon">${ICONS[g.icon]}</span>
-      <h3>${g.title}</h3>
-    </div>
-    <div class="skill-items">${items}</div>
-  `);
-  card.style.transitionDelay = (i*0.06)+'s';
-  sg.appendChild(card);
-});
+if (sg) {
+  skillGroups.forEach((g, i) => {
+    let contentHtml = '';
+    if (g.isCerts) {
+      const certsHtml = g.certs.map(c => `
+        <div class="cert-card">
+          <div class="cert-main">
+            <div class="cert-title">${c.url ? `<a href="${c.url}" target="_blank" rel="noopener" class="p-link">${c.name} ${ICONS.external}</a>` : c.name}</div>
+            <div class="cert-issuer">${c.issuer}</div>
+          </div>
+          <span class="cert-date">${c.date}</span>
+        </div>
+      `).join('');
+      contentHtml = `<div class="cert-list">${certsHtml}</div>`;
+    } else {
+      const items = g.items.map(it => `<span>${it}</span>`).join('');
+      contentHtml = `<div class="skill-items">${items}</div>`;
+    }
+
+    const card = el('div', 'skill glass-card reveal-up', `
+      <div class="skill-head">
+        <span class="skill-icon">${ICONS[g.icon]}</span>
+        <h3>${g.title}</h3>
+      </div>
+      ${contentHtml}
+    `);
+    card.style.transitionDelay = (i * 0.06) + 's';
+    sg.appendChild(card);
+  });
+}
 
 // Experience
 const tl = document.getElementById('timeline');
-experience.forEach((e,i)=>{
-  const pts = e.points.map(p=>`<li>${ICONS.sparkles}<span>${p}</span></li>`).join('');
-  const item = el('div','tl-item reveal-up',`
-    <div class="tl-dot"></div>
-    <div class="tl-card glass-card">
-      <div class="tl-head">
-        ${ICONS.briefcase}
-        <div>
-          <h3>${e.role}</h3>
-          <p>${e.org}</p>
+if (tl) {
+  experience.forEach((e, i) => {
+    const pts = e.points.map(p => `<li>${ICONS.sparkles}<span>${p}</span></li>`).join('');
+    const item = el('div', 'tl-item reveal-up', `
+      <div class="tl-dot"></div>
+      <div class="tl-card glass-card">
+        <div class="tl-head">
+          <span class="tl-head-icon">${ICONS.briefcase}</span>
+          <div class="tl-head-info">
+            <h3>${e.role}</h3>
+            <p>${e.org}</p>
+            <div class="tl-meta">
+              <span class="tl-badge">${e.period}</span>
+              <span class="tl-type">${e.type}</span>
+              <span class="tl-loc">${ICONS.pin} ${e.location}</span>
+            </div>
+          </div>
+        </div>
+        <ul>${pts}</ul>
+      </div>
+    `);
+    item.style.transitionDelay = (i * 0.08) + 's';
+    tl.appendChild(item);
+  });
+}
+
+// Education
+const eduContainer = document.getElementById('educationContainer');
+if (eduContainer) {
+  const tagSpans = education.tags.map(t => `<span class="edu-tag">${t}</span>`).join('');
+  const eduCard = el('div', 'edu-card glass-card', `
+    <div class="edu-head">
+      <div class="edu-icon">${ICONS.gradCap}</div>
+      <div class="edu-main">
+        <h3 class="edu-institution">${education.institution}</h3>
+        <div class="edu-degree">${education.degree}</div>
+        <div class="edu-meta">
+          <span class="edu-badge">${ICONS.pin} ${education.location}</span>
+          <span class="edu-badge">Autonomous National Institute</span>
         </div>
       </div>
-      <ul>${pts}</ul>
     </div>
+    <p class="edu-desc">${education.description}</p>
+    <div class="edu-tags">${tagSpans}</div>
   `);
-  item.style.transitionDelay = (i*0.05)+'s';
-  tl.appendChild(item);
-});
+  eduContainer.appendChild(eduCard);
+}
 
 // Hobbies
 const hg = document.getElementById('hobbiesGrid');
-hobbies.forEach((h,i)=>{
-  const card = el('div','hobby glass-card reveal-up',`
-    <span class="hobby-icon">${ICONS[h.icon]}</span>
-    <h3>${h.title}</h3>
-    <p>${h.items}</p>
-  `);
-  card.style.transitionDelay = (i*0.06)+'s';
-  hg.appendChild(card);
-});
+if (hg) {
+  hobbies.forEach((h, i) => {
+    const card = el('div', 'hobby glass-card reveal-up', `
+      <span class="hobby-icon">${ICONS[h.icon]}</span>
+      <h3>${h.title}</h3>
+      <p>${h.items}</p>
+    `);
+    card.style.transitionDelay = (i * 0.06) + 's';
+    hg.appendChild(card);
+  });
+}
 
 // Year
 document.getElementById('year').textContent = new Date().getFullYear();
@@ -282,7 +458,7 @@ document.querySelectorAll('.stat .num[data-count]').forEach(n=>countIO.observe(n
 
 // ---------- Nav active + smooth scroll ----------
 const navLinks = document.querySelectorAll('#navLinks a');
-const sections = ['home','projects','skills','experience','hobbies'].map(id=>document.getElementById(id));
+const sections = ['home','projects','skills','experience','education','hobbies'].map(id=>document.getElementById(id));
 const navIO = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
@@ -301,11 +477,13 @@ function onScroll(){
   const pct = h.scrollTop / (h.scrollHeight - h.clientHeight);
   progress.style.width = (pct*100)+'%';
   // timeline fill
-  const rect = expSection.getBoundingClientRect();
-  const vh = window.innerHeight;
-  const total = rect.height + vh*0.5;
-  const passed = Math.min(Math.max(vh - rect.top, 0), total);
-  fill.style.height = Math.min((passed/total)*100, 100)+'%';
+  if (expSection) {
+    const rect = expSection.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const total = rect.height + vh*0.5;
+    const passed = Math.min(Math.max(vh - rect.top, 0), total);
+    fill.style.height = Math.min((passed/total)*100, 100)+'%';
+  }
 }
 window.addEventListener('scroll', onScroll, { passive:true });
 onScroll();
@@ -316,7 +494,7 @@ if (dot) {
   window.addEventListener('mousemove', (e) => {
     dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%,-50%)`;
   });
-  document.querySelectorAll('a, button, .project, .hobby, .skill, .tl-card').forEach(node => {
+  document.querySelectorAll('a, button, .project, .hobby, .skill, .tl-card, .edu-card, .cert-card, .archive-btn').forEach(node => {
     node.addEventListener('mouseenter', () => dot.classList.add('grow'));
     node.addEventListener('mouseleave', () => dot.classList.remove('grow'));
   });
